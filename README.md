@@ -9,7 +9,6 @@ This is a simple Python3 script to convert a personal playlist on YTM to a new p
 	"userID": "<YOUR_ACCOUNT_ID>",
 	"oldPlayListID": "<YTM_PLAYLIST_ID>"
 }
-
 ```
 
 The client properties can be obtained by creating a new application on the Spotify developer dashboard.
