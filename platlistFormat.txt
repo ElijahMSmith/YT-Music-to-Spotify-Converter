@@ -1,0 +1,40 @@
+{
+  "id": "PLQwVIlKxHM6qv-o99iX9R85og7IzF9YS_",
+  "privacy": "PUBLIC",
+  "title": "New EDM This Week 03/13/2020",
+  "thumbnails": [...]
+  "description": "Weekly r/EDM new release roundup. Created with github.com/sigma67/spotifyplaylist_to_gmusic",
+  "author": "sigmatics",
+  "year": "2020",
+  "duration": "6+ hours",
+  "duration_seconds": 52651,
+  "trackCount": 237,
+  "tracks": [
+    {
+      "videoId": "bjGppZKiuFE",
+      "title": "Lost",
+      "artists": [
+        {
+          "name": "Guest Who",
+          "id": "UCkgCRdnnqWnUeIH7EIc3dBg"
+        },
+        {
+          "name": "Kate Wild",
+          "id": "UCwR2l3JfJbvB6aq0RnnJfWg"
+        }
+      ],
+      "album": {
+        "name": "Lost",
+        "id": "MPREb_PxmzvDuqOnC"
+      },
+      "duration": "2:58",
+      "likeStatus": "INDIFFERENT",
+      "thumbnails": [...],
+      "isAvailable": True,
+      "isExplicit": False,
+      "feedbackTokens": {
+        "add": "AB9zfpJxtvrU...",
+        "remove": "AB9zfpKTyZ..."
+    }
+  ]
+}
