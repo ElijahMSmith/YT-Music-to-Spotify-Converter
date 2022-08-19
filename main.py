@@ -1,6 +1,5 @@
 import os
 import json
-from pprint import PrettyPrinter
 from ytmusicapi import YTMusic
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
@@ -87,15 +86,32 @@ for i in range(0, len(createdTrackList)):
     track = createdTrackList[i]
 
     # Title, artists, album
-    q = f"artist:{','.join(track.artists)}+track:{track.title}"
+    q = f"track:{track.title}"
 
-    try:
-        res = sp.search(q=q, limit=1, type="track")
-        trackIDs.append(res["tracks"]["items"][0]["id"])
-    except AttributeError:
-        print("Failed to retrieve id from ", track)
-    except:
-        print("Failed to search for ", track)
+    res = sp.search(q=q, type="track")
+    prettyPrint(res)
+
+    allTracks = res["tracks"]["items"]
+    found = False
+    for i in range(0, len(allTracks)):
+        curTrack = allTracks[i]
+        for j in range(0, len(curTrack["artists"])):
+            curArtist = curTrack["artists"][j]["name"]
+            for k in range(0, len(track.artists)):
+                print(curArtist, track.artists[k])
+                if curArtist == track.artists[k]:
+                    print("yes")
+                    trackIDs.append(curTrack["id"])
+                    found = True
+                    break
+                print("no")
+            if found:
+                break
+        if found:
+            break
+
+    # if not found:
+    #     print(f'No search result matched for {q}')
 
 res = sp.playlist_add_items(playlist_id=playlistID, items=trackIDs)
 prettyPrint(res)
