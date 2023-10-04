@@ -25,7 +25,6 @@ def prettyPrint(jsonData):
 
 # Retrieve config data
 
-
 f = open('config.json')
 data = json.load(f)
 
@@ -36,7 +35,7 @@ oldPlaylistID = data["oldPlayListID"]
 
 # Get all tracks from matching YT Music Playlist
 
-client = YTMusic('headers_auth.json')
+client = YTMusic('oauth.json')
 retrievedPlaylist = client.get_playlist(oldPlaylistID)
 prettyPrint(retrievedPlaylist)
 
